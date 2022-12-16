@@ -1,0 +1,478 @@
+.nav-link{
+    color:black;
+}
+
+.main-image{
+    width: 300px;
+    padding-top: 10px;
+    padding-left: 300px;
+    padding-right: 414px;
+}
+
+.navbar.navbar-expand-lg.bg-light{
+    height: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+
+}
+
+.header-svg{
+    color: black;
+}
+
+.item-shop{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.item-favorite{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.item-account{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.bottom-nav-container{
+    position: sticky;
+    top: 0;
+    min-height: 2em;
+    width: 100%;
+    height: 60px;
+    background-color: #05141f;
+ 
+}
+
+.rio{
+    margin-left: 70px;
+    margin-top: 16px;
+    border-right: 1px solid white;
+    
+    height: 28px;
+    width: 40px;
+    float: left;
+    
+}
+
+.rio-color{
+    color: white;
+    font-size: 18px;
+    font-weight: 650;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header-price{
+   
+    color: white;
+}
+
+.item-bottom{
+    color: white;
+}
+
+.price-container{
+    padding-top: 16px;
+    padding-left: 15px;
+    float: left;
+    width: 150px;
+    height: 30px;
+}
+
+.bottom-header-links{
+    margin-top: 16px;
+    height: 25px;
+    width: 600px;
+    float: right;
+
+}
+
+.bottom-nav-link{
+    color: white;
+    padding: 0px 12px 0px 12px;
+}
+
+.botom-header-rightside-link{
+    float: right;
+    color: white;
+}
+
+.botom-header-rightside-link-padding{
+    float: right;
+   padding-top: 16px;
+   padding-right: 65px;
+
+}
+
+.mark-bottom-header{
+    width: 35px;
+    height: 28px;
+    float: right;
+    padding-bottom: 17px;
+    margin-right: 20px;
+    color: white;
+    border-right: 1px solid white;
+}
+
+.header-mark-button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+
+.image-container{
+    width: 1905px;
+    height: 830px;
+    background-position: 50% center;
+    background-image: url(images/kia_image.jpeg);
+}
+
+.breadcrumb-item{
+
+    color: white;
+}
+
+.breadcrumb-links{
+    color: white;
+}
+
+.breadcrump{
+    width: 250px;
+    float: left;
+    font-size: 12px;
+    padding-top: 15px;
+    padding-left: 70px;
+}
+
+
+
+.cost-info-on-image{
+    padding-top: 16px;
+    width: 200px;
+}
+
+.auto-in-stock{
+    width: 200px;
+    height: 60px;
+    background-color: white;
+}
+
+.text-on-image{
+    margin-top: 16px;
+    font-weight: 500;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+    color: black;
+    align-items: center;
+}
+
+
+.main{
+    float: right;
+    width: 550px;
+    height: 70px;
+    padding-top: 50px;
+    padding-right: 75px;
+
+}
+
+.text-on-bottom-main-kia{
+    color: white;
+    font-size: 18px;
+    height: 25px;
+    padding-top: 25px;
+    
+}
+
+.text-on-bottom-main-rio{
+    color: white;
+    font-size: 70px;
+    font-weight: 500;
+    height: 80px;
+    
+
+}
+
+.text-on-bottom-main-ru{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.vstack.gap-3{
+   position: absolute;
+   top: 750px;
+   left: 70px;
+    
+    float:left;
+}
+
+.right-bottom-main{
+    position: absolute;
+    bottom: 80px;
+    right: 90px;
+    width: 1000px;
+    height: 80px;
+    float: right;
+    
+    
+}
+
+.col.main-text{
+    padding-top: 15px;
+    color: white;
+    font-size: 12px;
+    
+}
+
+.space{
+    width: 1905px;
+    height: 60px;
+}
+
+
+.image-rio2{
+    padding-top: 200px;
+    scale: 78%;
+    width: 100%;
+}
+
+.group-text-bot{
+    
+    position: absolute;
+    float: left;
+    left: 200px;
+    
+}
+
+.big-main-bot{
+    width: 900px;
+   float: left;
+   
+}
+
+.low-main-bot{
+    width: 150px;
+    float: left;
+    margin-left: 230px;
+}
+
+.big-main-text-bot{
+    text-align: left;
+    color: black;
+    font-size: 50px;
+    font-weight: 500;
+    
+}
+
+.low-main-text-bot{
+    color: black;
+    font-size: 15px;
+    width: 200px;
+}
+
+.image-rio3{
+    padding-top: 200px;
+    scale: 78%;
+    width: 100%;
+}
+
+.background-color{
+    padding-left: 80px;
+    background-color: #05141f;
+    width: 1905px;
+    height: 974px;
+}
+
+.foo-text1{
+    font-size: 15px;
+    color: #9ba1a5;
+}
+
+.foo-text2{
+    font-size: 15px;
+    color: #9ba1a5;
+}
+
+.foo-text-container{
+   padding-bottom: 60px;
+    padding-top: 65px;
+    padding-right: 60px;
+    width: 1745px;
+    border-bottom: 1px solid #9ba1a5;;
+}
+
+.footer-more{
+    color: white;
+    font-size: 15px;
+    font-weight: 500px;
+}
+
+.foo-mark{
+    color: white;
+}
+
+.footer-logo{
+    color: white;
+    padding-top: 60px;
+}
+
+
+.footer-lists{
+   width: 1745px;
+   height: 250px;
+}
+
+.foo-list{
+    margin-left: 0px;
+}
+
+.list1-sets{
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.all-lists-settings{
+    
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.list2-sets{
+    color: #9ba1a5;
+    font-size: 15px;
+   
+}
+
+.margin-bot{
+    margin-bottom: 10px;
+}
+
+.contacts-foo{
+   padding-left: 100px;
+}
+
+.img-scale{
+    border-radius: 15px;
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.text-contacts{
+    font-size: 15px;
+    color: #9ba1a5;
+
+}
+
+.space-footer{
+    height: 60px;
+}
+.contacts-two{
+    
+    width: 1745px;
+    height: 54.95px;
+}
+
+.kia-socials{
+    width: 800px;
+    justify-content: space-between;
+}
+
+.kia-social-text{
+    color:#9ba1a5;
+    font-size: 15px;
+}
+
+.foo-items-color{
+    color: white;
+    padding-right: 7px;
+}
+
+.kia-number{
+    padding-right: 440px;
+    position: absolute; 
+    right:0px;
+    
+    height: 68.5px;
+}
+
+.kia-number-text{
+    color: #9ba1a5;
+    font-size: 15px;
+}
+
+.number-font{
+    color: white;
+    font-weight: 500px;
+    font-size: 18px;
+}
+
+.text-foo-last{
+    color: #697279;
+    font-size: 12px;
+    width: 1017.91px;
+}
+
+.feedback{
+    color: white;
+    font-weight: 500px;
+   
+}
+
+.feedback-padding{
+    padding-top: 16px;
+}
+
+.feedback-settings{
+    border-top: white solid 1px ;
+    border-bottom: white solid 1px ;
+    border-left: white solid 1px ;
+    border-right: white solid 1px ;
+    width: 250px;
+    height: 65px;
+    margin-right: 400px;
+    position: absolute; 
+    right:0px;
+    text-align: center;
+}
+
+.infootext{
+    position: absolute; 
+    right:0px;
+    margin-right: 460px;
+    color: #697279;
+    font-size: 12px;
+    text-align: left;
+}
+
+.for3bottom{
+    width: 890px;
+}
+
+.lastfoo{
+    color:#9ba1a5;
+    font-size: 12px;
+}
+
+.all-lists-settings2{
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 100px;
+}
