@@ -134,7 +134,9 @@ if(isset($_GET['username']) && isset($_GET['cost'])){
               <div class="textcard">
                   <div class ="user-fio"><?=$deal['username']?></div>
 <!--                  <div class="auto-name">--><?//$deal['auto-name']?><!--</div>-->
-                  <div class="auto-cost"><?=$deal['cost']?></div>
+                  <div class="car-cost"><?=$deal['cost']?></div>
+
+                  <div class="car-sname"><?=$deal['carname']?></div>
               </div>
           </div>
           <div class="col auto">

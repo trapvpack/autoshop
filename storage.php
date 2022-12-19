@@ -23,8 +23,8 @@ class Storage
 
     public function fetchDeals()
     {
-        $stmt = $this->db->query('select * from deal');
-        return $stmt->fetch();
+       return $this->db->query('select * from deal inner join car on car.id = deal.id_car');
+
     }
 
 }

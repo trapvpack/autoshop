@@ -486,11 +486,15 @@ a{
 }
 
 .user-fio{
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 
-.auto-name{
-    margin-bottom: 120px;
+.car-cost{
+    margin-bottom: 100px;
+}
+
+.car-name{
+    margin-bottom: 100px;
 }
 
 .textcard{
@@ -518,3 +522,4 @@ a{
     margin-top: 10px;
     font-size: 30px;
 }
+
