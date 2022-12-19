@@ -124,7 +124,7 @@ if(isset($_GET['username']) && isset($_GET['cost'])){
         </form>
     </div>
     <?php foreach  ($deals as $deal): ?>
-    <?var_dump($deal)?>
+
       <div class="container text-center card">
         <div class="row">
           <div class="col">
