@@ -476,3 +476,47 @@ a{
     padding-left: 0px;
     padding-right: 100px;
 }
+
+.happyPeople{
+    width: 400px;
+    height: 400px;
+}
+
+.card{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.user-fio{
+    margin-bottom: 120px;
+}
+
+.auto-name{
+    margin-bottom: 120px;
+}
+
+.textcard{
+    width: 500px;
+    height: 400px;
+}
+
+.auto-review{
+    width: 400px;
+    height: 400px;
+}
+
+.filter-container{
+    width: 1000px;
+    margin: auto;
+}
+.filter-button-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.filter-title {
+    margin:auto;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+}
