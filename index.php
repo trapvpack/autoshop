@@ -128,19 +128,19 @@ if(isset($_GET['username']) && isset($_GET['cost'])){
       <div class="container text-center card">
         <div class="row">
           <div class="col">
-            <img class="happyPeople" src="user_images/<?=$deal['photo']?>">
+            <img class="happyPeople" src="user_images/<?=htmlspecialchars($deal['photo'])?>">
           </div>
           <div class="col">
               <div class="textcard">
-                  <div class ="user-fio"><?=$deal['username']?></div>
-<!--                  <div class="auto-name">--><?//$deal['auto-name']?><!--</div>-->
-                  <div class="car-cost"><?=$deal['cost']?></div>
+                  <div class ="user-fio"><?=htmlspecialchars($deal['username'])?></div>
 
-                  <div class="car-sname"><?=$deal['carname']?></div>
+                  <div class="car-cost"><?=htmlspecialchars($deal['cost'])?></div>
+
+                  <div class="car-sname"><?=htmlspecialchars($deal['carname'])?></div>
               </div>
           </div>
           <div class="col auto">
-              <div class="review"><?=$deal['review']?></div>
+              <div class="review"><?=htmlspecialchars($deal['review'])?></div>
         </div>
         </div>
       </div>

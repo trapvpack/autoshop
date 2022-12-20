@@ -523,3 +523,16 @@ a{
     font-size: 30px;
 }
 
+.regs{
+    width: 500px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.auth{
+    width: 500px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
