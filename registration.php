@@ -37,8 +37,8 @@
                   <div>
                       <a class="header-svg" href="#"><svg class="item-shop" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" class="block" data-v-ecf83df2=""><path d="M1 2l5-1 1 11 13-2V4H6" stroke="currentColor" stroke-width="1.5" data-v-ecf83df2=""></path><circle cx="8" cy="17" r="1.75" stroke="currentColor" stroke-width="1.5" data-v-ecf83df2=""></circle><circle cx="18" cy="17" r="1.75" stroke="currentColor" stroke-width="1.5" data-v-ecf83df2=""></circle></svg></a>
                       <a class="header-svg" href="#"><svg class="item-favorite" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" class="block" data-v-7920c350=""><path d="M10.739 17.243l.016-.016.018-.015c2.353-2.01 4.237-3.644 5.54-5.176 1.297-1.524 1.937-2.855 1.937-4.253 0-2.258-1.8-4.033-4.2-4.033-1.315 0-2.64.603-3.486 1.57L10 5.964l-.564-.644c-.847-.967-2.17-1.57-3.486-1.57-2.4 0-4.2 1.775-4.2 4.033 0 1.398.64 2.73 1.936 4.253 1.304 1.532 3.188 3.165 5.541 5.176l.018.015.016.016.739.714.739-.714z" stroke="currentColor" stroke-width="1.5" data-v-7920c350=""></path></svg></a>
-                      <a class="header-svg" href="#"><svg class="item-account" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" class="block" data-v-087237c3=""><circle cx="10" cy="6" r="5.25" stroke="currentColor" stroke-width="1.5" data-v-087237c3=""></circle><path d="M1 18.828A10.79 10.79 0 0110 14a10.79 10.79 0 019 4.828" stroke="currentColor" stroke-width="1.5" data-v-087237c3=""></path></svg></a>
-
+                      <button type="submit" class="btn btn-primary">Войти</button>
+                      <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
                   </div>
               </div>
           </div>
@@ -91,20 +91,11 @@
               <div id="emailHelp" class="form-text"></div>
           </div>
           <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Имя</label>
+              <label for="exampleInputEmail1" class="form-label">Фамилия Имя Отчество</label>
               <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text"></div>
           </div>
-          <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Фамилия</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text"></div>
-          </div>
-          <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Отчество</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text"></div>
-          </div>
+
           <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Группа крови</label>
               <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -116,7 +107,7 @@
               <div id="emailHelp" class="form-text"></div>
           </div>
           <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Резус-фактор</label>
+              <label for="exampleInputEmail1" class="form-label">Дата рождения</label>
               <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text"></div>
           </div>
