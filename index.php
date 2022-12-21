@@ -1,7 +1,13 @@
 <?php
-require_once 'storage.php';
+
+
+
+require_once 'storage/storage.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/user-init.php';
+
 
 $deals = array();
+
 $dbase = new Storage();
 
 if(isset($_GET['username']) && isset($_GET['cost'])){
@@ -46,17 +52,42 @@ if(isset($_GET['username']) && isset($_GET['cost'])){
                   <a class="nav-link" href="#">Выбор и покупка</a>
                   <a class="nav-link" href="#">Авто в наличии</a>
                   <a class="nav-link" href="#">Авто с пробегом</a>
+                    <a href="/autoshop">
                   <div class="main-image"> 
                     <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 18" width="80" height="18" preserveAspectRatio="xMidYMid" class="color-black site-header__logo-icon"><path id="Layer" d="M46.64 15.92c0 .15.04.23.13.23.07 0 .13-.03.2-.07L71.75.63c.44-.28.83-.43 1.43-.43h5.45c.84 0 1.4.54 1.4 1.35v9.97c0 1.2-.27 1.9-1.4 2.55l-6.61 3.8c-.08.06-.16.08-.22.08-.08 0-.15-.05-.15-.27V6.03c0-.13-.04-.23-.14-.23-.07 0-.12.03-.19.07L53.2 17.16c-.51.32-.92.41-1.39.41H39.79c-.83 0-1.4-.54-1.4-1.34V1.86c0-.1-.05-.19-.13-.19-.07 0-.13.02-.2.06L26.11 8.62c-.12.07-.15.14-.15.19 0 .05.02.09.11.17l8.53 8.18c.11.11.19.2.19.28 0 .09-.12.14-.27.14H26.8c-.6 0-1.07-.09-1.4-.4l-5.18-4.97c-.06-.06-.1-.08-.15-.08a.45.45 0 00-.17.05l-8.65 5c-.52.3-.88.39-1.4.39H1.88c-.84 0-1.4-.54-1.4-1.34V6.44c0-1.22.27-1.9 1.4-2.55L8.53.06c.07-.04.12-.05.18-.05.09 0 .15.1.15.31v13.1c0 .13.04.2.14.2.05 0 .12-.04.19-.08L31.65.59c.53-.31.86-.4 1.48-.4h12.09c.84 0 1.4.54 1.4 1.34l.02 14.39z" fill="currentColor"></path></svg>
                   </div>
+                    </a>
                   <a class="nav-link" href="#">Авто по подписке</a>
                   <a class="nav-link" href="#">Владельцам</a>
                   <a class="nav-link" href="#">Бренд Kia</a>
                   <a class="nav-link" href="#">Дилеры</a>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary">Войти</button>
+
+
+
+
+
+                    <?php if (isset($_SESSION['USER_ID']) == false):?>
+                    <a href = "/autoshop/view/authview.php">
+                    <button class="btn btn-primary">Войти</button>
+                    </a>
+                    <?php endif; ?>
+
+                    <?php if (isset($_SESSION['USER_ID']) == false):?>
+                    <a href = "/autoshop/view/registrationview.php">
                     <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                    </a>
+                    <?php endif; ?>
+
+
+
+                    <?php if (isset($_SESSION['USER_ID'])):?>
+                        <span><?=htmlspecialchars($current['fio'])?></span>
+                    <a href="/autoshop/logout.php">
+                        <button class="btn btn-primary" >Log out</button>
+                    </a>
+                    <?php endif; ?>
                   <a class="header-svg" href="#"><svg class="item-shop" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" class="block" data-v-ecf83df2=""><path d="M1 2l5-1 1 11 13-2V4H6" stroke="currentColor" stroke-width="1.5" data-v-ecf83df2=""></path><circle cx="8" cy="17" r="1.75" stroke="currentColor" stroke-width="1.5" data-v-ecf83df2=""></circle><circle cx="18" cy="17" r="1.75" stroke="currentColor" stroke-width="1.5" data-v-ecf83df2=""></circle></svg></a>
                   <a class="header-svg" href="#"><svg class="item-favorite" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" class="block" data-v-7920c350=""><path d="M10.739 17.243l.016-.016.018-.015c2.353-2.01 4.237-3.644 5.54-5.176 1.297-1.524 1.937-2.855 1.937-4.253 0-2.258-1.8-4.033-4.2-4.033-1.315 0-2.64.603-3.486 1.57L10 5.964l-.564-.644c-.847-.967-2.17-1.57-3.486-1.57-2.4 0-4.2 1.775-4.2 4.033 0 1.398.64 2.73 1.936 4.253 1.304 1.532 3.188 3.165 5.541 5.176l.018.015.016.016.739.714.739-.714z" stroke="currentColor" stroke-width="1.5" data-v-7920c350=""></path></svg></a>
 
@@ -108,10 +139,14 @@ if(isset($_GET['username']) && isset($_GET['cost'])){
 
     <main>
     <div class="filter-container">
+        <?php  if (isset($_SESSION['USER_ID'])): ?>
+
         <div class="filter-title">
             <b>Filter</b>
         </div>
+
         <form action="/autoshop">
+
             <div class="form-group">
                 <label for="username">username</label>
                 <input name="username" type="text" class="form-control" id="formGroupExampleInput">
@@ -123,10 +158,13 @@ if(isset($_GET['username']) && isset($_GET['cost'])){
             <div class="filter-button-container">
                 <button type="submit" class="btn btn-primary">Accept</button>
                 <button type="clear" class="btn btn-primary">Clear</button>
+                <button type="submit" class="btn btn-primary">Изменить</button>
             </div>
+
         </form>
     </div>
-    <?php foreach  ($deals as $deal): ?>
+
+            <?php foreach  ($deals as $deal): ?>
 
       <div class="container text-center card">
         <div class="row">
@@ -147,7 +185,26 @@ if(isset($_GET['username']) && isset($_GET['cost'])){
         </div>
         </div>
       </div>
-    <?php endforeach ?>
+        <?php endforeach ?>
+
+
+        <form class="card newcard" action="" method="post">
+            <p>Фото</p>
+            <input type="image" name="photo">
+            <p>ФИО</p>
+            <input type="text" name="fio"
+            <p>Стоимость сделки</p>
+            <input type="number" name="cost">
+            <p>Модель</p>
+            <input type="text" name="model">
+            <p>Отзыв</p>
+            <textare3+a name="review"></textare3a>
+            <button type="submit" class="btn btn-primary">Добавить запись</button>
+            <?php endif;?>
+
+        </form>
+
+
     </main>
 
     <footer class="background-color">

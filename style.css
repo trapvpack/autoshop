@@ -536,3 +536,8 @@ a{
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+.newcard{
+    width: 800px;
+    margin: auto;
+}
