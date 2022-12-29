@@ -1,31 +1,28 @@
 <?php
 
-
-
-require_once 'storage/storage.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/SingletonConnection.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/deal/DealService.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/deal/DealRepository.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/user/UserRouter.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/user-init.php';
 
 
-$deals = array();
+$service = new DealService(
+    new DealRepository(SingletonConnection::connection()),
+    new CarRepository(SingletonConnection::connection())
+);
+$userRouter = new UserRouter(
+    new UserService(
+        new UserRepository(SingletonConnection::connection())
+    )
+);
 
-$dbase = new Storage();
+$userRouter->handle();
+$repo = new CarRepository(SingletonConnection::connection());
+$cars = $repo->fetchCars();
 
-if(isset($_GET['username']) && isset($_GET['cost'])){
-    if($_GET['username'] === '')
-    {
-        $_GET['username'] = '%';
-    }
-
-    if($_GET['cost'] === '')
-    {
-        $_GET['cost'] = '%';
-    }
-
-
-    $deals = $dbase->filter();
-} else {
-    $deals = $dbase->fetchDeals();
-}
+$userRouter->handle();
+$deals = $service->deals();
 
 ?>
 <!doctype html>
@@ -83,7 +80,8 @@ if(isset($_GET['username']) && isset($_GET['cost'])){
 
 
                     <?php if (isset($_SESSION['USER_ID'])):?>
-                        <span><?=htmlspecialchars($current['fio'])?></span>
+
+                        <span><?= htmlspecialchars($current['fio'])?></span>
                     <a href="/autoshop/logout.php">
                         <button class="btn btn-primary" >Log out</button>
                     </a>
@@ -158,19 +156,21 @@ if(isset($_GET['username']) && isset($_GET['cost'])){
             <div class="filter-button-container">
                 <button type="submit" class="btn btn-primary">Accept</button>
                 <button type="clear" class="btn btn-primary">Clear</button>
-                <button type="submit" class="btn btn-primary">Изменить</button>
+
             </div>
 
         </form>
     </div>
 
-            <?php foreach  ($deals as $deal): ?>
+
 
       <div class="container text-center card">
+          <?php foreach  ($deals as $deal): ?>
         <div class="row">
           <div class="col">
             <img class="happyPeople" src="user_images/<?=htmlspecialchars($deal['photo'])?>">
           </div>
+
           <div class="col">
               <div class="textcard">
                   <div class ="user-fio"><?=htmlspecialchars($deal['username'])?></div>
@@ -182,24 +182,43 @@ if(isset($_GET['username']) && isset($_GET['cost'])){
           </div>
           <div class="col auto">
               <div class="review"><?=htmlspecialchars($deal['review'])?></div>
+          </div>
+            <div
+              <a href="/autoshop/view/edit-view.php?id=<?= $deal['id'] ?>">
+                  <button class="btn btn-warning crud-btn">
+                      Изменить запись
+                  </button>
+              </a>
+
+          <a href="/autoshop/view/change-image-view.php?id=<?= $deal['id'] ?>">
+              <button class="btn btn-warning crud-btn">
+                  Изменить фото
+              </button>
+          </a>
+
+              <a href="/autoshop/delete.php?id=<?= $deal['id'] ?>">
+                  <button class="btn btn-warning crud-btn">
+                      Удалить запись
+                  </button>
+              </a>
         </div>
-        </div>
-      </div>
         <?php endforeach ?>
+      </div>
+        </div>
 
 
-        <form class="card newcard" action="" method="post">
-            <p>Фото</p>
-            <input type="image" name="photo">
+        <form class="card newcard" method="post" action="/autoshop/create.php">
             <p>ФИО</p>
-            <input type="text" name="fio"
+            <input type="text" name="username"
             <p>Стоимость сделки</p>
             <input type="number" name="cost">
             <p>Модель</p>
-            <input type="text" name="model">
+            <input type="text" name="carname">
             <p>Отзыв</p>
-            <textare3+a name="review"></textare3a>
-            <button type="submit" class="btn btn-primary">Добавить запись</button>
+            <textarea name="review"></textarea>
+
+            <button type="submit" class="btn btn-success">Добавить сделку
+            </button>
             <?php endif;?>
 
         </form>

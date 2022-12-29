@@ -17,11 +17,11 @@ class CarRepository
     public function idByName(string $name)
     {
         $stmt = $this->db->prepare('
-        SELECT id FROM autoshop.car WHERE carname = ? LIMIT 1;
+        SELECT car_id FROM autoshop.car WHERE carname = ? LIMIT 1;
         ');
         $stmt->execute([$name]);
         $cars = $stmt->fetchAll();
-        return $this->nullIfEmpty($cars)['id'];
+        return $this->nullIfEmpty($cars)['car_id'];
     }
 
     private function nullIfEmpty(bool|array $cars): mixed

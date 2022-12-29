@@ -38,7 +38,6 @@ class DealService
     public function edit(): bool
     {
         $this->putCarId();
-        var_dump($_POST);
         return $this->dealRepository->edit($_POST);
     }
 
@@ -79,14 +78,14 @@ class DealService
     }
 
     public function uploadPicture(): string {
-        $name = $_FILES['photo-input']['name'];
+        $name = $_FILES['picture-input']['name'];
         $target = $_SERVER['DOCUMENT_ROOT'] . '/autoshop/user_images/';
-        $new = md5($_POST['id']) . pathinfo($name, PATHINFO_EXTENSION);
+        $new = md5($_POST['id']) . '.' . pathinfo($name, PATHINFO_EXTENSION);
         if (file_exists($target . $new))
         {
             unlink($target . $new);
         }
-        if (!move_uploaded_file($_FILES['photo-input']['tmp_name'], $target . $new))
+        if (!move_uploaded_file($_FILES['picture-input']['tmp_name'], $target . $new))
         {
             echo "File is not loaded.";
         }

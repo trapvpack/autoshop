@@ -1,9 +1,9 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/autopshop/deal/DealRepository.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/autopshop/deal/DealRouter.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/autopshop/deal/DealService.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/autopshop/SingletonConnection.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/deal/DealRepository.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/deal/DealRouter.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/deal/DealService.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/SingletonConnection.php';
 
 $router = new DealRouter(
     new DealService(
@@ -18,6 +18,7 @@ $router = new DealRouter(
 
 if ($router->handle())
 {
+
     header("Location: /autoshop/");
 } else
 {

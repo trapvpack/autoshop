@@ -14,7 +14,7 @@ class DealRepository
     {
         return $this->db->query('
         SELECT * FROM deal
-        INNER JOIN car ON car.id=deal.id_car
+        INNER JOIN car ON car.car_id=deal.id_car
         ');
     }
 
@@ -26,7 +26,7 @@ class DealRepository
         deal.username LIKE ?
         AND deal.cost LIKE ?;
         ');
-        $stmt->execute(['%' . $_GET['name'] . '%', $_GET['cost']]);
+        $stmt->execute(['%' . $_GET['username'] . '%', $_GET['cost']]);
         return $stmt->fetchAll();
     }
 
@@ -34,7 +34,7 @@ class DealRepository
     {
         $stmt = $this->db->prepare('
         SELECT * FROM autoshop.deal
-        INNER JOIN car c ON deal.id_car = c.id
+        INNER JOIN car c ON deal.id_car = c.car_id
         WHERE deal.id = ? LIMIT 1
         ');
         $stmt->execute([$id]);
