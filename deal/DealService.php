@@ -80,7 +80,7 @@ class DealService
 
     public function uploadPicture(): string {
         $name = $_FILES['photo-input']['name'];
-        $target = $_SERVER['DOCUMENT_ROOT'] . '/autoshop/images/';
+        $target = $_SERVER['DOCUMENT_ROOT'] . '/autoshop/user_images/';
         $new = md5($_POST['id']) . pathinfo($name, PATHINFO_EXTENSION);
         if (file_exists($target . $new))
         {

@@ -1,8 +1,9 @@
 <?php
 
-class ItemRouter extends DealRouter
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/Router.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/deal/DealService.php';
+class DealRouter extends Router
 {
-
     private DealService $service;
 
     public function __construct(DealService $service)
