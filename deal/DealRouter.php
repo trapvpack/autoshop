@@ -3,9 +3,9 @@
 class ItemRouter extends DealRouter
 {
 
-    private ItemService $service;
+    private DealService $service;
 
-    public function __construct(ItemService $service)
+    public function __construct(DealService $service)
     {
         $this->service = $service;
     }

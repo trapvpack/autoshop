@@ -1,5 +1,6 @@
 <?php
-
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/deal/DealRepository.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/autoshop/car/CarRepository.php';
 class DealService
 {
 
@@ -23,7 +24,7 @@ class DealService
     } else
     {
         $this->prepareGet();
-        $result = $this->itemRepository->filteredDeals();
+        $result = $this->dealRepository->filteredDeals();
     }
         return $result;
     }
